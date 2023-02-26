@@ -125,14 +125,14 @@ export default function CourseCompletion() {
               coverflowEffect={{
                 rotate: 45,
                 stretch: 0,
-                depth: 100,
+                depth: 200,
                 modifier: 1,
                 slideShadows: false,
               }}
               spaceBetween={10}
               slidesPerView={4}
               navigation
-              autoplay={{ delay: 100, disableOnInteraction: false }}
+              autoplay={{ delay: 200, disableOnInteraction: false }}
               speed={800}
               pagination={{ clickable: true }}
               scrollbar={{ draggable: true }}
