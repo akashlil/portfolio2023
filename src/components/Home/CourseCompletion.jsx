@@ -129,7 +129,7 @@ export default function CourseCompletion() {
                 modifier: 1,
                 slideShadows: false,
               }}
-              spaceBetween={10}
+              spaceBetween={5}
               slidesPerView={4}
               navigation
               autoplay={{ delay: 200, disableOnInteraction: false }}

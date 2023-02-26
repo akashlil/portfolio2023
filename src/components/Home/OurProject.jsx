@@ -28,22 +28,22 @@ export default function OurProject() {
             pagination={{
               clickable: true,
             }}
-            autoplay={{ disableOnInteraction: false, delay: 500 }}
+            // autoplay={{ disableOnInteraction: false, delay: 500 }}
             modules={[Mousewheel, Pagination, Autoplay]}
             className="h-[400px] w-full"
           >
             {datas?.data?.map((data) => (
               <SwiperSlide className="grid grid-cols-1">
-                <div className="shadow-2xl h-full p-3 lg:p-5 rounded-xl bg-black/50 lg:hover:bg-[#34da93] group">
+                <div className="shadow-2xl h-full p-3 lg:p-5 rounded-xl bg-black/50 lg:hover:bg-[#34da93] group overflow-hidden">
                   <div className="grid gap-1 lg:grid-cols-2 justify-between items-center">
                     <div className="lg:my-5 lg:mr-8 lg:space-y-2">
                       <p className="text-dm lg:text-3xl ">
                         Online English tutors & teachers for private{" "}
                       </p>
-                      <button className="text-lg mr-2 bg-black group-hover:bg-black/50 py-1 px-1 b rounded my-8">
+                      <button className="text-lg mr-2 bg-black group-hover:bg-black/50 py-1 px-1 b rounded my-2 lg:my-8">
                         Rakib Isalm
                       </button>
-                      <button className="text-lg bg-black group-hover:bg-black/50 py-1 px-1 b rounded my-8">
+                      <button className="text-lg mr-2 bg-black group-hover:bg-black/50 py-1 px-1 b rounded my-2 lg:my-8">
                         Bsc in Science
                       </button>
 
@@ -60,7 +60,7 @@ export default function OurProject() {
                         src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA17MXlp.img?w=800&h=415&q=60&m=2&f=jpg"
                         alt=""
                         srcset=""
-                        className=" lg:z-20 lg:w-[550px] lg:h-[360px] rounded lg:rounded-3xl lg:group-hover:scale-110 group-hover:shadow-2xl lg:group-hover:shadow-current group-hover:bg-white  ease-linear transition origin-center lg:origin-right"
+                        className=" lg:w-[550px] lg:h-[360px] rounded lg:rounded-3xl lg:group-hover:scale-110 group-hover:shadow-2xl lg:group-hover:shadow-current group-hover:bg-white  ease-linear transition origin-center lg:origin-right"
                       />
                     </div>
                   </div>
