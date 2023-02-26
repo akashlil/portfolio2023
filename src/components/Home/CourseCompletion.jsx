@@ -134,11 +134,11 @@ export default function CourseCompletion() {
               navigation
               autoplay={{ delay: 200, disableOnInteraction: false }}
               speed={800}
-              pagination={{ clickable: true }}
+              // pagination={{ clickable: true }}
               scrollbar={{ draggable: true }}
               centeredSlides={true}
-              onSwiper={(swiper) => console.log(swiper)}
-              onSlideChange={() => console.log("slide change")}
+              // onSwiper={(swiper) => console.log(swiper)}
+              // onSlideChange={() => console.log("slide change")}
             >
               {arrSudent?.map((student) => (
                 <SwiperSlide className="p-10">

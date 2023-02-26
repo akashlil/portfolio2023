@@ -24,10 +24,11 @@ export default function OurProject() {
             slidesPerView={1}
             spaceBetween={30}
             mousewheel={true}
+            speed={1000}
             pagination={{
               clickable: true,
             }}
-            autoplay={{ disableOnInteraction: false, delay: 800 }}
+            autoplay={{ disableOnInteraction: false, delay: 500 }}
             modules={[Mousewheel, Pagination, Autoplay]}
             className="h-[400px] w-full"
           >
