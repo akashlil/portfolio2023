@@ -27,7 +27,7 @@ export default function OurProject() {
             pagination={{
               clickable: true,
             }}
-            // autoplay={{ disableOnInteraction: false, delay: 800 }}
+            autoplay={{ disableOnInteraction: false, delay: 800 }}
             modules={[Mousewheel, Pagination, Autoplay]}
             className="h-[400px] w-full"
           >

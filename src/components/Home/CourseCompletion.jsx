@@ -132,12 +132,11 @@ export default function CourseCompletion() {
               spaceBetween={10}
               slidesPerView={4}
               navigation
-              // autoplay={{ delay: 100, disableOnInteraction: false }}
+              autoplay={{ delay: 100, disableOnInteraction: false }}
               speed={800}
-              // pagination={{ clickable: true }}
-              // scrollbar={{ draggable: true }}
-              // centeredSlides={true}
-
+              pagination={{ clickable: true }}
+              scrollbar={{ draggable: true }}
+              centeredSlides={true}
               onSwiper={(swiper) => console.log(swiper)}
               onSlideChange={() => console.log("slide change")}
             >
