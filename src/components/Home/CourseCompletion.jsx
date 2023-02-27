@@ -104,7 +104,7 @@ export default function CourseCompletion() {
   ];
 
   return (
-    <div className="px-4 sm:px-6 lg:px-32 text-white ">
+    <div className="px-4 sm:px-6 lg:px-32">
       <div>
         <p className="text-4xl lg:text-5xl mb-16 text-center font-semibold">
           Course Completion
@@ -126,7 +126,7 @@ export default function CourseCompletion() {
                 rotate: 45,
                 stretch: 0,
                 depth: 200,
-                modifier: 1,
+                // modifier: 1,
                 slideShadows: false,
               }}
               spaceBetween={5}
@@ -150,7 +150,7 @@ export default function CourseCompletion() {
                       className="group-hover:h-[250px] group-hover:w-[200px]  h-[350px] w-[200px] object-cover bottom-0 transition-all ease-in-out delay-75 duration-200 z-10 rounded-2xl"
                     />
                     <hr />
-                    <div className="absolute bottom-0 group-hover:text-indigo-900 text-white z-30 break-all  text-sm p-2 ">
+                    <div className="absolute bottom-0 group-hover:text-indigo-900 z-30 break-all  text-sm p-2 ">
                       <p>Name: {student.name}</p>
                       <p>Class: {student.class}</p>
                       <p>Tottal Mark: {student.tottalmark}</p>

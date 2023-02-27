@@ -11,30 +11,43 @@ export default function OurProject() {
       .then((res) => res.json())
       .then((data) => setDatas(data));
   }, []);
+  let k;
 
   return (
-    <div className="text-white my-28 px-4 lg:px-32 sm:px-6">
+    <div className="my-28 px-4 lg:px-32 sm:px-6">
       <div className="space-y-20">
-        <p className="text-4xl lg:text-6xl text-center font-semibold">
+        <p className="text-4xl lg:text-5xl text-center font-semibold">
           My Project List
         </p>
         <div className="space-y-20 ">
           <Swiper
             direction={"vertical"}
+            // onSlideChange={(data) => {
+            //   console.log(data.isBeginning);
+            //   console.log(data.isEnd);
+            //   if (data.isBeginning) {
+            //     k = false;
+            //   }
+            //   if (data.isEnd) {
+            //     k
+            //   }
+            // }}
             slidesPerView={1}
             spaceBetween={30}
             mousewheel={true}
             speed={1000}
+            grabCursor={k}
             pagination={{
               clickable: true,
             }}
             // autoplay={{ disableOnInteraction: false, delay: 500 }}
+
             modules={[Mousewheel, Pagination, Autoplay]}
             className="h-[400px] w-full"
           >
             {datas?.data?.map((data) => (
               <SwiperSlide className="grid grid-cols-1">
-                <div className="shadow-2xl h-full p-3 lg:p-5 rounded-xl bg-black/50 lg:hover:bg-[#34da93] group overflow-hidden">
+                <div className="shadow-2xl h-full p-3 lg:p-5 rounded-xl bg-black/50 lg:hover:bg-blue-400/20 group overflow-hidden">
                   <div className="grid gap-1 lg:grid-cols-2 justify-between items-center">
                     <div className="lg:my-5 lg:mr-8 lg:space-y-2">
                       <p className="text-dm lg:text-3xl ">

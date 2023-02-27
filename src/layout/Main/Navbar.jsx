@@ -1,38 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const [navColor, setNavColor] = useState(true);
-  const channavbar = () => {
-    if (parseInt(window.scrollY) <= 80) {
-      setNavColor(true);
-    } else {
-      setNavColor(false);
-    }
-  };
-
-  window.addEventListener("scroll", channavbar);
   return (
     <nav
-      className={`sticky transition-colors top-0 backdrop-blur-lg shadow-2xl shadow-black/30 ${
-        navColor ? "bg-[#192539]" : ""
-      } text-white z-50 py-2`}
+      className={`sticky transition-colors top-0 backdrop-blur-md shadow-2xl shadow-black/10 z-50`}
     >
       <div className="">
         <div className="flex items-center justify-between h-16">
-          <div className="flex justify-between grow px-4 sm:px-6 lg:px-32">
+          <div className="flex justify-between items-center grow px-4 sm:px-6 lg:px-32">
             <a className="shrink-0 items-center flex" href="#">
-              <img
-                className="h-8 w-8"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                alt="Workflow"
-              />
-              <p className="ml-5 text-2xl font-serif ">teacher</p>
+              <img className="h-20 w-20" src="/logo.png" alt="Workflow" />
+              <p className="text-4xl font-serif -translate-x-8">kash</p>
             </a>
 
             <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
+              <div className="ml-10 flex  space-x-4">
                 <a
                   href="#"
                   className="hover:text-sky-400 px-3 py-2 rounded-md text-md font-semibold"
@@ -108,7 +92,6 @@ export default function Navbar() {
         id="mobile-menu"
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 transition duration-200">
-          {/* <a href="#" className="text-gray-300 hover:text-white block px-3 py-2 rounded"> */}
           <a
             href="#"
             className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
