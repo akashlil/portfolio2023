@@ -13,7 +13,7 @@ export default function Baner() {
       <div className="grid lg:grid-cols-2 place-content-center place-items-center gap-10 lg:gap-0 h-full">
         <div>
           <div className="text-center lg:text-start">
-            <p className="text-2xl">Hello I am</p>
+            <p className="text-2xl">Hello</p>
             <p className="text-5xl font-bold">
               Md{" "}
               <span className={`${h1Color}`}>
@@ -27,8 +27,8 @@ export default function Baner() {
             </p>
             <p className="mt-5">Full Stack Developer</p>
             <p className="mb-8">
-              I'm Web Developer based in BD, and I'm very passionate and
-              dedicated to my work.
+              I'm a Full Stack Developer, and I'm very passionate and dedicated
+              to my work.
             </p>
             <Link
               target="_blank"
