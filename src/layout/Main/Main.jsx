@@ -13,7 +13,7 @@ export default function Main() {
   const dispatch = useDispatch();
 
   return (
-    <div className={`${bgColor} ${textColor}`}>
+    <div className={`${bgColor} ${textColor} scroll-smooth`}>
       <Navbar />
       <button
         type="button"

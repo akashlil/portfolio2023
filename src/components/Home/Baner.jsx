@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { Typewriter } from "react-simple-typewriter";
 
 export default function Baner() {
@@ -29,9 +30,14 @@ export default function Baner() {
               I'm Web Developer based in BD, and I'm very passionate and
               dedicated to my work.
             </p>
-            <button className="text-gray-400 py-2 px-2 ring-2 ring-slate-700 bg-black  rounded-full hover:bg-gray-800">
-              My Resume Download
-            </button>
+            <Link
+              target="_blank"
+              to="https://docs.google.com/document/d/1PDITbwCTCk0Ap3HBq4CaMWWGecW-QIoX5lbXzizKOcM/"
+            >
+              <button className="text-gray-400 py-2 px-2 ring-2 ring-slate-700 bg-black  rounded-full hover:bg-gray-800">
+                My Resume Download
+              </button>
+            </Link>
           </div>
         </div>
         <div className="lg:place-self-end place-self-center ">

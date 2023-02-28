@@ -7,10 +7,10 @@ export default function CourseCompletion() {
   const { h1Color, themes } = useSelector(
     (state) => state.colorchanges.changetheme
   );
-  console.log(h1Color);
+
   const [datas, setDatas] = useState([]);
   useEffect(() => {
-    fetch("https://jobbox-server-akashlil.vercel.app/jobs")
+    fetch("/course.json")
       .then((res) => res.json())
       .then((data) => setDatas(data));
   }, []);
@@ -32,11 +32,12 @@ export default function CourseCompletion() {
             pagination={{
               clickable: true,
             }}
+            loop
             autoplay={{ disableOnInteraction: false, delay: 500 }}
             modules={[Mousewheel, Pagination, Autoplay]}
             className="h-[400px] w-full"
           >
-            {datas?.data?.map((data) => (
+            {datas?.map((data) => (
               <SwiperSlide className="grid grid-cols-1">
                 <div
                   className={`shadow-2xl h-full p-3 lg:p-5 rounded-xl ${
@@ -47,27 +48,21 @@ export default function CourseCompletion() {
                 >
                   <div className="grid gap-1 lg:grid-cols-2 justify-between items-center">
                     <div className="lg:my-5 lg:mr-8 lg:space-y-2">
-                      <p className="text-dm lg:text-3xl ">
-                        Online English tutors & teachers for private{" "}
-                      </p>
-                      <button className="text-sm mr-2 bg-blue-700/90 group-hover:bg-blue-700 py-1 px-1 b rounded my-2 lg:my-8">
-                        Rakib Isalm
-                      </button>
-                      <button className="text-sm mr-2 bg-blue-700/90 group-hover:bg-blue-700 py-1 px-1 b rounded my-2 lg:my-8">
-                        Bsc in Science
-                      </button>
+                      <p className="text-dm lg:text-3xl ">{data.name}</p>
+                      {data?.subject.map((data) => (
+                        <button className="text-sm mr-2 uppercase bg-blue-700/90 group-hover:bg-blue-700 py-1 px-1 b rounded my-2 lg:my-8">
+                          {data}
+                        </button>
+                      ))}
 
-                      <p className="text-base ">
-                        Enjoy the most effective and enjoyable journey with
-                        interactive
-                      </p>
+                      <p className="text-base ">{data.itName}</p>
                       <button className="my-2 lg:px-7 inline text-start p-2  lg:py-3 rounded-md bg-blue-700/90 group-hover:bg-blue-700 hover:opacity-90">
-                        {`Details ->`}
+                        Details
                       </button>
                     </div>
                     <div className="lg:flex justify-center items-center ">
                       <img
-                        src="https://www.tradeford.com/images/company/logo/792965.jpg"
+                        src={data.images}
                         alt=""
                         srcset=""
                         className=" lg:w-[550px] lg:h-[360px] rounded lg:rounded-3xl lg:group-hover:scale-110 group-hover:shadow-2xl lg:group-hover:shadow-current group-hover:bg-white  ease-linear transition origin-center lg:origin-right"

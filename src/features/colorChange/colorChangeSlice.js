@@ -33,7 +33,7 @@ const colorChane = createSlice({
         state.changetheme.status = true;
       } else {
         state.changetheme.themes = "light";
-        state.changetheme.bgColor = "bg-white";
+        state.changetheme.bgColor = "bg-[#f9fafe]";
         state.changetheme.textColor = "text-balck";
 
         //mySkill section

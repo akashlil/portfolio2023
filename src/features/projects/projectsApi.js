@@ -4,7 +4,7 @@ const projectApi = apiSlice.injectEndpoints({
   endpoints: (bulider) => ({
     getProdects: bulider.query({
       query: () => ({
-        url: "/jobs",
+        url: "",
       }),
     }),
   }),
