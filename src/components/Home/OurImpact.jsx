@@ -7,19 +7,19 @@ export default function OurImpact() {
         <div className="lg:flex p-5 gap-5 justify-between lg:space-x-10">
           <div className="mb-3 text-center">
             <div className="inline-block px-10 py-5 bg-gradient-to-tl from-violet-600 to-red-600 rounded-full">
-              <p className="text-3xl font-bold">3</p>
+              <p className="text-3xl font-bold ">3</p>
             </div>
             <p className="text-lg">Work With Companies</p>
           </div>
           <div className="mb-3 text-center">
             <div className="inline-block px-10 py-5 bg-gradient-to-tl from-cyan-700 to-purple-600 rounded-full">
-              <p className="text-3xl font-bold">Find</p>
+              <p className="text-3xl font-bold animate-ping ">Find</p>
             </div>
             <p className="text-lg">job States</p>
           </div>
           <div className="mb-3 text-center">
             <div className="inline-block px-10 py-5 bg-gradient-to-tl from-blue-600 to-red-600 rounded-full">
-              <p className="text-3xl font-bold">200+</p>
+              <p className="text-3xl font-bold">50+</p>
             </div>
             <p className="text-lg">Project Complects</p>
           </div>

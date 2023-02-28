@@ -33,121 +33,121 @@ export default function Myskill() {
           </p>
         </div>
         <div className="flex gap-2  lg:gap-4 justify-center items-center flex-wrap">
-          <div className="inline-flex flex-col justify-center items-center">
+          <div className="inline-flex group flex-col justify-center items-center">
             <p
-              className={`lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
+              className={`group-hover:animate-bounce lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
             >
               Next.js 1 year
             </p>
             <Link target="_blank" to="https://meet.google.com/">
-              <div className="hover:scale-125 transition ease-out">
+              <div className="group-hover:scale-125  transition ease-out">
                 <TbBrandNextjs
-                  className={`w-[75px] h-[75px] lg:w-[120px] lg:h-[125px] shadow-xl ${iconColor} m-8 p-5 shadow-black/70 rounded-xl text-red-900`}
+                  className={` w-[75px] h-[75px] lg:w-[120px] lg:h-[125px] shadow-xl ${iconColor} m-8 p-5 shadow-black/70 rounded-xl text-red-900`}
                 ></TbBrandNextjs>
               </div>
             </Link>
           </div>
-          <div className="inline-flex flex-col justify-center items-center">
+          <div className="inline-flex group flex-col justify-center items-center">
             <p
-              className={`lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
+              className={`group-hover:animate-bounce lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
             >
               React.js 2 year
             </p>
             <Link target="_blank" to="https://meet.google.com/">
-              <div className="hover:scale-125 transition ease-out">
+              <div className="group-hover:scale-125 transition ease-out">
                 <FaReact
                   className={`w-[75px] h-[75px] lg:w-[120px] lg:h-[125px] shadow-xl ${iconColor} m-8 p-5 shadow-black/70 rounded-xl text-blue-600`}
                 />
               </div>
             </Link>
           </div>
-          <div className="inline-flex flex-col justify-center items-center ">
+          <div className="inline-flex  group flex-col justify-center items-center ">
             <p
-              className={`lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
+              className={`group-hover:animate-bounce lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
             >
               Redux 1 year
             </p>
             <Link target="_blank" to="https://zoom.us/download">
-              <div className="hover:scale-125 transition ease-out">
+              <div className="group-hover:scale-125 transition ease-out">
                 <SiRedux
                   className={`w-[75px] h-[75px] lg:w-[120px] lg:h-[125px] shadow-xl ${iconColor} m-8 p-5 shadow-black/70 rounded-xl text-fuchsia-600`}
                 />
               </div>
             </Link>
           </div>
-          <div className="inline-flex flex-col justify-center items-center ">
+          <div className="inline-flex  group flex-col justify-center items-center ">
             <p
-              className={`lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
+              className={`group-hover:animate-bounce lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
             >
               JavaScript 3 year
             </p>
             <Link target="_blank" to="https://zoom.us/download">
-              <div className="hover:scale-125 transition ease-out">
+              <div className="group-hover:scale-125 transition ease-out">
                 <IoLogoJavascript
                   className={`w-[75px] h-[75px] lg:w-[120px] lg:h-[125px] shadow-xl ${iconColor} m-8 p-5 shadow-black/70 rounded-xl text-yellow-500`}
                 />
               </div>
             </Link>
           </div>
-          <div className="inline-flex flex-col justify-center items-center ">
+          <div className=" group inline-flex flex-col justify-center items-center ">
             <p
-              className={`lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
+              className={`group-hover:animate-bounce lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
             >
               Node.js 3 year
             </p>
             <Link target="_blank" to="https://www.whatsapp.com/download">
-              <div className="hover:scale-125 transition ease-out">
+              <div className="group-hover:scale-125 transition ease-out">
                 <DiNodejs
                   className={`w-[75px] h-[75px] lg:w-[120px] lg:h-[125px] shadow-xl ${iconColor} m-8 p-5 shadow-black/70 rounded-xl text-green-500`}
                 />
               </div>
             </Link>
           </div>
-          <div className="inline-flex flex-col justify-center items-center ">
+          <div className=" group inline-flex flex-col justify-center items-center ">
             <p
-              className={`lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
+              className={`group-hover:animate-bounce lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
             >
               MongoDB 2 year
             </p>
             <Link target="_blank" to="https://www.facebook.com/">
-              <div className="hover:scale-125 transition ease-out">
+              <div className="group-hover:scale-125 transition ease-out">
                 <SiMongodb
                   className={`w-[75px] h-[75px] lg:w-[120px] lg:h-[125px] shadow-xl ${iconColor} m-8 p-5 shadow-black/70 rounded-xl text-green-500`}
                 />
               </div>
             </Link>
           </div>
-          <div className="inline-flex flex-col justify-center items-center ">
+          <div className=" group inline-flex flex-col justify-center items-center ">
             <p
-              className={`lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
+              className={`group-hover:animate-bounce lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
             >
               Php 3 year
             </p>
             <Link target="_blank" to="https://www.facebook.com/">
-              <div className="hover:scale-125 transition ease-out">
+              <div className="group-hover:scale-125 transition ease-out">
                 <TbBrandPhp
                   className={`w-[75px] h-[75px] lg:w-[120px] lg:h-[125px] shadow-xl ${iconColor} m-8 p-5 shadow-black/70 rounded-xl text-blue-400`}
                 />
               </div>
             </Link>
           </div>
-          <div className="inline-flex flex-col justify-center items-center ">
+          <div className=" group inline-flex flex-col justify-center items-center ">
             <p
-              className={`lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
+              className={`group-hover:animate-bounce lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
             >
               Mysql 3 year
             </p>
             <Link target="_blank" to="https://www.facebook.com/">
-              <div className="hover:scale-125 transition ease-out">
+              <div className="group-hover:scale-125 transition ease-out">
                 <SiMysql
                   className={`w-[75px] h-[75px] lg:w-[120px] lg:h-[125px] shadow-xl ${iconColor} m-8 p-5 shadow-black/70 rounded-xl text-blue-400`}
                 />
               </div>
             </Link>
           </div>
-          <div className="inline-flex flex-col justify-center items-center ">
+          <div className=" group inline-flex flex-col justify-center items-center ">
             <p
-              className={`lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
+              className={`group-hover:animate-bounce lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
             >
               Firebase 3 year
             </p>
@@ -159,42 +159,42 @@ export default function Myskill() {
               </div>
             </Link>
           </div>
-          <div className="inline-flex flex-col justify-center items-center ">
+          <div className=" group inline-flex flex-col justify-center items-center ">
             <p
-              className={`lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
+              className={`group-hover:animate-bounce lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
             >
               Tailwindcss 2 year
             </p>
             <Link target="_blank" to="https://www.facebook.com/">
-              <div className="hover:scale-125 transition ease-out">
+              <div className="group-hover:scale-125 transition ease-out">
                 <SiTailwindcss
                   className={`w-[75px] h-[75px] lg:w-[120px] lg:h-[125px] shadow-xl ${iconColor} m-8 p-5 shadow-black/70 rounded-xl text-blue-800`}
                 />
               </div>
             </Link>
           </div>
-          <div className="inline-flex flex-col justify-center items-center ">
+          <div className=" group inline-flex flex-col justify-center items-center ">
             <p
-              className={`lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
+              className={`group-hover:animate-bounce lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
             >
               Bootstrap 3 year
             </p>
             <Link target="_blank" to="https://www.facebook.com/">
-              <div className="hover:scale-125 transition ease-out">
+              <div className="group-hover:scale-125 transition ease-out">
                 <SiBootstrap
                   className={`w-[75px] h-[75px] lg:w-[120px] lg:h-[125px] shadow-xl ${iconColor} m-8 p-5 shadow-black/70 rounded-xl text-violet-600`}
                 />
               </div>
             </Link>
           </div>
-          <div className="inline-flex flex-col justify-center items-center ">
+          <div className=" group inline-flex flex-col justify-center items-center ">
             <p
-              className={`lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
+              className={`group-hover:animate-bounce lg:text-lg text-sm rounded-xl px-5 py-3 shadow-lg ${textColor} ${bgColor} inline-block`}
             >
               Github
             </p>
             <Link target="_blank" to="https://www.facebook.com/">
-              <div className="hover:scale-125 transition ease-out">
+              <div className="group-hover:scale-125 transition ease-out">
                 <BsGithub
                   className={`w-[75px] h-[75px] lg:w-[120px] lg:h-[125px] shadow-xl ${iconColor} m-8 p-5 shadow-black/70 rounded-xl text-sky-600`}
                 />

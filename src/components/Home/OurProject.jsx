@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { useGetProdectsQuery } from "../../features/projects/projectsApi";
 
 export default function OurProject() {
   const [datas, setDatas] = useState([1, 2, 3, 4, 6, 7, 8, 9, 10]);
   const { themes, h1Color } = useSelector(
     (state) => state.colorchanges.changetheme
   );
+  const { data } = useGetProdectsQuery();
+  console.log(data);
 
   return (
     <div className="px-4 lg:px-32 sm:px-6">

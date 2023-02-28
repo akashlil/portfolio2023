@@ -8,9 +8,8 @@ export default function Footer() {
         <div className="">
           <p className="text-xl font-semibold font-sans">Office Address</p>
           <p>
-            Level-4, 34, Awal Centre, Banani, Dhaka Support:
-            Web@Programming-Hero.Com Helpline: 01322810867 (Available: Sat -
-            Thu, 10:00 AM To 7:00 PM)
+            Mirpur-10, Dhaka Gmail: akashmunshi393@gamil.com Helpline:
+            01736685XXX (Available: Sat - Thu, 10:00 AM To 7:00 PM)
           </p>
         </div>
         <div>
