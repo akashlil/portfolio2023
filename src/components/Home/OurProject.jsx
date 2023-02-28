@@ -1,87 +1,56 @@
 import React, { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Mousewheel } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
+import { useSelector } from "react-redux";
 
 export default function OurProject() {
-  const [datas, setDatas] = useState([]);
-  useEffect(() => {
-    fetch("https://jobbox-server-akashlil.vercel.app/jobs")
-      .then((res) => res.json())
-      .then((data) => setDatas(data));
-  }, []);
-  let k;
+  const [datas, setDatas] = useState([1, 2, 3, 4, 6, 7, 8, 9, 10]);
+  const { themes, h1Color } = useSelector(
+    (state) => state.colorchanges.changetheme
+  );
 
   return (
-    <div className="my-28 px-4 lg:px-32 sm:px-6">
-      <div className="space-y-20">
-        <p className="text-4xl lg:text-5xl text-center font-semibold">
-          My Project List
-        </p>
-        <div className="space-y-20 ">
-          <Swiper
-            direction={"vertical"}
-            // onSlideChange={(data) => {
-            //   console.log(data.isBeginning);
-            //   console.log(data.isEnd);
-            //   if (data.isBeginning) {
-            //     k = false;
-            //   }
-            //   if (data.isEnd) {
-            //     k
-            //   }
-            // }}
-            slidesPerView={1}
-            spaceBetween={30}
-            mousewheel={true}
-            speed={1000}
-            grabCursor={k}
-            pagination={{
-              clickable: true,
-            }}
-            // autoplay={{ disableOnInteraction: false, delay: 500 }}
-
-            modules={[Mousewheel, Pagination, Autoplay]}
-            className="h-[400px] w-full"
+    <div className="px-4 lg:px-32 sm:px-6">
+      <p
+        className={`text-center text-4xl ${
+          themes === `dark`
+            ? `from-cyan-200 to-violet-500 bg-clip-text text-transparent bg-gradient-to-br`
+            : `${h1Color}`
+        }  lg:text-5xl font-bold mb-10 lg:mb-16`}
+      >
+        My Project
+      </p>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
+        {datas.map((data, index) => (
+          <div
+            className={`${
+              themes === `dark`
+                ? `shadow-2xl bg-gray-600/20 rounded-xl `
+                : `shadow-md rounded-lg border`
+            } hover:cursor-pointer `}
           >
-            {datas?.data?.map((data) => (
-              <SwiperSlide className="grid grid-cols-1">
-                <div className="shadow-2xl h-full p-3 lg:p-5 rounded-xl bg-black/50 lg:hover:bg-blue-400/20 group overflow-hidden">
-                  <div className="grid gap-1 lg:grid-cols-2 justify-between items-center">
-                    <div className="lg:my-5 lg:mr-8 lg:space-y-2">
-                      <p className="text-dm lg:text-3xl ">
-                        Online English tutors & teachers for private{" "}
-                      </p>
-                      <button className="text-lg mr-2 bg-black group-hover:bg-black/50 py-1 px-1 b rounded my-2 lg:my-8">
-                        Rakib Isalm
-                      </button>
-                      <button className="text-lg mr-2 bg-black group-hover:bg-black/50 py-1 px-1 b rounded my-2 lg:my-8">
-                        Bsc in Science
-                      </button>
-
-                      <p className="text-base ">
-                        Enjoy the most effective and enjoyable journey with
-                        interactive
-                      </p>
-                      <button className="my-2 lg:px-7 inline text-start p-2  lg:py-3 rounded-md bg-white text-black hover:opacity-80">
-                        {`Details ->`}
-                      </button>
-                    </div>
-                    <div className="lg:flex justify-center items-center ">
-                      <img
-                        src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA17MXlp.img?w=800&h=415&q=60&m=2&f=jpg"
-                        alt=""
-                        srcset=""
-                        className=" lg:w-[550px] lg:h-[360px] rounded lg:rounded-3xl lg:group-hover:scale-110 group-hover:shadow-2xl lg:group-hover:shadow-current group-hover:bg-white  ease-linear transition origin-center lg:origin-right"
-                      />
-                    </div>
-                  </div>
+            <div className="flex items-center gap-3 justify-between p-3 ">
+              <div>
+                <p
+                  className={`text-lg lg:text-3xl ${
+                    themes === `dark`
+                      ? `bg-clip-text text-transparent bg-gradient-to-br from-cyan-200 to-violet-500`
+                      : ``
+                  }`}
+                >
+                  {"Portfolio website".slice(0, 20)}
+                </p>
+              </div>
+              <div className="flip-box">
+                <div className="flip-box-inner">
+                  <img
+                    src="https://i.ibb.co/JRdVq8P/dream.png"
+                    alt="Paris"
+                    className="rounded-xl w-36 h-20 lg:w-72 lg:h-40 hover:scale-x-125 transition duration-150  ease-linear hover:shadow-current shadow-2xl"
+                  />
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

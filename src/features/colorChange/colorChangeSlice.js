@@ -5,6 +5,7 @@ const initialState = {
     status: true,
     bgColor: "bg-[#0b1120]",
     textColor: "text-white",
+    h1Color: "text-blue-700/90",
     themes: "dark",
     mySkillColor: {
       textColor: "text-white",
@@ -35,7 +36,7 @@ const colorChane = createSlice({
         state.changetheme.bgColor = "bg-white";
         state.changetheme.textColor = "text-balck";
 
-        //my section
+        //mySkill section
         state.changetheme.mySkillColor.textColor = state.changetheme.textColor;
         state.changetheme.mySkillColor.bgColor = "bg-slate-800/50";
         state.changetheme.mySkillColor.iconColor = "bg-black/80";

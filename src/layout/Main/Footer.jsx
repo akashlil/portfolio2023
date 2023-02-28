@@ -47,7 +47,7 @@ export default function Footer() {
       <p className="text-md lg:text-center pt-10  text-transparent bg-gradient-to-br from-indigo-700 to-fuchsia-600 bg-clip-text">
         @Power by akash 2023
       </p>
-      <div className="bg-indigo-600 h-20 w-[1050px] absolute top-10 left-[10%] opacity-40 rotate-12 shadow-2xl shadow-current blur-3xl "></div>
+      <div className="w-[300px] bg-indigo-600 h-20 lg:w-[600px] absolute top-60 lg:top-10 lg:left-[30%] opacity-40 rotate-12 shadow-2xl shadow-current blur-3xl "></div>
     </div>
   );
 }

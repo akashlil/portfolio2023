@@ -1,166 +1,84 @@
-import React from "react";
-// Import Swiper React components
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-  EffectCoverflow,
-} from "swiper";
-
-// Import Swiper styles
+import { Pagination, Autoplay, Mousewheel } from "swiper";
+import { useSelector } from "react-redux";
 
 export default function CourseCompletion() {
-  const arrSudent = [
-    {
-      name: "Allina",
-      class: "Eight",
-      tottalmark: 850,
-      result: "GPA 5",
-      image:
-        "https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      name: "Anny fa",
-      class: "Eight",
-      tottalmark: 850,
-      result: "GPA 5",
-      image:
-        "https://images.pexels.com/photos/3768126/pexels-photo-3768126.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-    {
-      name: "Ahik ahamed",
-      class: "Eight",
-      tottalmark: 850,
-      result: "GPA 5",
-      image:
-        "https://images.pexels.com/photos/1329494/pexels-photo-1329494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      name: "Ahik ahamed",
-      class: "Eight",
-      tottalmark: 850,
-      result: "GPA 5",
-      image:
-        "https://images.pexels.com/photos/4143797/pexels-photo-4143797.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      name: "Ahik ahamed",
-      class: "Eight",
-      tottalmark: 850,
-      result: "GPA 5",
-      image: "https://images.pexels.com/photos/448877/pexels-photo-448877.jpeg",
-    },
-    {
-      name: "Ahik ahamed",
-      class: "Eight",
-      tottalmark: 850,
-      result: "GPA 5",
-      image:
-        "https://images.pexels.com/photos/3793238/pexels-photo-3793238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      name: "Ahik ahamed",
-      class: "Eight",
-      tottalmark: 850,
-      result: "GPA 5",
-      image:
-        "https://images.pexels.com/photos/3755716/pexels-photo-3755716.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-    {
-      name: "Ahik ahamed",
-      class: "Eight",
-      tottalmark: 850,
-      result: "GPA 5",
-      image:
-        "https://images.pexels.com/photos/3755716/pexels-photo-3755716.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-    {
-      name: "Ahik ahamed",
-      class: "Eight",
-      tottalmark: 850,
-      result: "GPA 5",
-      image:
-        "https://images.pexels.com/photos/3755716/pexels-photo-3755716.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-    {
-      name: "Ahik ahamed",
-      class: "Eight",
-      tottalmark: 850,
-      result: "GPA 5",
-      image:
-        "https://images.pexels.com/photos/3755716/pexels-photo-3755716.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-    {
-      name: "Ahik ahamed",
-      class: "Eight",
-      tottalmark: 850,
-      result: "GPA 5",
-      image:
-        "https://images.pexels.com/photos/3755716/pexels-photo-3755716.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-  ];
+  const { h1Color, themes } = useSelector(
+    (state) => state.colorchanges.changetheme
+  );
+  console.log(h1Color);
+  const [datas, setDatas] = useState([]);
+  useEffect(() => {
+    fetch("https://jobbox-server-akashlil.vercel.app/jobs")
+      .then((res) => res.json())
+      .then((data) => setDatas(data));
+  }, []);
 
   return (
-    <div className="px-4 sm:px-6 lg:px-32">
-      <div>
-        <p className="text-4xl lg:text-5xl mb-16 text-center font-semibold">
-          Course Completion
+    <div className="my-28 px-4 lg:px-32 sm:px-6">
+      <div className="space-y-20">
+        <p className="text-4xl lg:text-5xl  text-center font-bold">
+          My <span className={`${h1Color}`}> Course Completion </span> List
         </p>
-        <div>
-          <div className=" ">
-            <Swiper
-              modules={[
-                Navigation,
-                Pagination,
-                Scrollbar,
-                A11y,
-                Autoplay,
-                EffectCoverflow,
-              ]}
-              effect={"coverflow"}
-              grabCursor={true}
-              coverflowEffect={{
-                rotate: 45,
-                stretch: 0,
-                depth: 200,
-                // modifier: 1,
-                slideShadows: false,
-              }}
-              spaceBetween={5}
-              slidesPerView={4}
-              navigation
-              autoplay={{ delay: 200, disableOnInteraction: false }}
-              speed={800}
-              // pagination={{ clickable: true }}
-              scrollbar={{ draggable: true }}
-              centeredSlides={true}
-              // onSwiper={(swiper) => console.log(swiper)}
-              // onSlideChange={() => console.log("slide change")}
-            >
-              {arrSudent?.map((student) => (
-                <SwiperSlide className="p-10">
-                  <div className="flex relative group h-[350px] w-[200px] bg-white rounded-2xl">
-                    <img
-                      src={student.image}
-                      alt=""
-                      srcset=""
-                      className="group-hover:h-[250px] group-hover:w-[200px]  h-[350px] w-[200px] object-cover bottom-0 transition-all ease-in-out delay-75 duration-200 z-10 rounded-2xl"
-                    />
-                    <hr />
-                    <div className="absolute bottom-0 group-hover:text-indigo-900 z-30 break-all  text-sm p-2 ">
-                      <p>Name: {student.name}</p>
-                      <p>Class: {student.class}</p>
-                      <p>Tottal Mark: {student.tottalmark}</p>
-                      <p>Result: {student.result}</p>
+        <div className="space-y-20  relative">
+          <Swiper
+            direction={"vertical"}
+            slidesPerView={1}
+            spaceBetween={30}
+            mousewheel={false}
+            speed={1000}
+            grabCursor={true}
+            pagination={{
+              clickable: true,
+            }}
+            autoplay={{ disableOnInteraction: false, delay: 500 }}
+            modules={[Mousewheel, Pagination, Autoplay]}
+            className="h-[400px] w-full"
+          >
+            {datas?.data?.map((data) => (
+              <SwiperSlide className="grid grid-cols-1">
+                <div
+                  className={`shadow-2xl h-full p-3 lg:p-5 rounded-xl ${
+                    themes == `dark`
+                      ? `bg-gray-900 lg:bg-blue-400/20`
+                      : ` border shadow`
+                  }  group overflow-hidden`}
+                >
+                  <div className="grid gap-1 lg:grid-cols-2 justify-between items-center">
+                    <div className="lg:my-5 lg:mr-8 lg:space-y-2">
+                      <p className="text-dm lg:text-3xl ">
+                        Online English tutors & teachers for private{" "}
+                      </p>
+                      <button className="text-sm mr-2 bg-blue-700/90 group-hover:bg-blue-700 py-1 px-1 b rounded my-2 lg:my-8">
+                        Rakib Isalm
+                      </button>
+                      <button className="text-sm mr-2 bg-blue-700/90 group-hover:bg-blue-700 py-1 px-1 b rounded my-2 lg:my-8">
+                        Bsc in Science
+                      </button>
+
+                      <p className="text-base ">
+                        Enjoy the most effective and enjoyable journey with
+                        interactive
+                      </p>
+                      <button className="my-2 lg:px-7 inline text-start p-2  lg:py-3 rounded-md bg-blue-700/90 group-hover:bg-blue-700 hover:opacity-90">
+                        {`Details ->`}
+                      </button>
+                    </div>
+                    <div className="lg:flex justify-center items-center ">
+                      <img
+                        src="https://www.tradeford.com/images/company/logo/792965.jpg"
+                        alt=""
+                        srcset=""
+                        className=" lg:w-[550px] lg:h-[360px] rounded lg:rounded-3xl lg:group-hover:scale-110 group-hover:shadow-2xl lg:group-hover:shadow-current group-hover:bg-white  ease-linear transition origin-center lg:origin-right"
+                      />
                     </div>
                   </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="w-[300px] bg-indigo-600 h-20 lg:w-[200px] absolute top-60 lg:top-10 lg:left-[0%] opacity-40 rotate-12 shadow-2xl shadow-current blur-3xl"></div>
         </div>
       </div>
     </div>

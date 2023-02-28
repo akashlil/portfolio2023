@@ -18,14 +18,15 @@ import { useSelector } from "react-redux";
 export default function Myskill() {
   const {
     mySkillColor: { textColor, bgColor, iconColor },
+    h1Color,
   } = useSelector((state) => state.colorchanges.changetheme);
 
   return (
     <div className="px-4 lg:px-32 sm:px-6">
       <div>
         <div className="mt-16 mb-10">
-          <p className="text-4xl lg:text-5xl  font-semibold text-center from-inherit">
-            My Skill With Technology
+          <p className="text-4xl lg:text-5xl  font-bold text-center from-inherit">
+            <span className={`${h1Color}`}>My Skill</span> With Technology
           </p>
           <p className="text-center mt-4 text-lg from-inherit">
             Full Satck Developer with experiences

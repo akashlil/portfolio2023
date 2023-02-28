@@ -3,7 +3,9 @@ import { useSelector } from "react-redux";
 import { Typewriter } from "react-simple-typewriter";
 
 export default function Baner() {
-  const { themes } = useSelector((state) => state.colorchanges.changetheme);
+  const { themes, h1Color } = useSelector(
+    (state) => state.colorchanges.changetheme
+  );
 
   return (
     <div className="px-4 sm:px-6 lg:px-32 backGroundGrid border-b border-gray-700 lg:bg-right  bg-no-repeat relative h-[100vh]">
@@ -13,7 +15,7 @@ export default function Baner() {
             <p className="text-2xl">Hello I am</p>
             <p className="text-5xl font-bold">
               Md{" "}
-              <span className="text-blue-700/90 ">
+              <span className={`${h1Color}`}>
                 <Typewriter
                   words={["Akash munshi"]}
                   loop={5}
@@ -35,7 +37,7 @@ export default function Baner() {
         <div className="lg:place-self-end place-self-center ">
           <div
             className={`border ${
-              themes == `light` ? `bg-white` : `bg-black/50`
+              themes === `light` ? `bg-white` : `bg-black/50`
             } border-gray-500/25 rounded-md h-72 lg:w-[500px]`}
           >
             <div>
@@ -50,13 +52,10 @@ export default function Baner() {
                           lightToDark: (state, action) => {
                             if (!state.changetheme.status) {
                               state.changetheme.themes = "dark";
-                              state.changetheme.bgColor = "bg-[#0b1120]";
-                              state.changetheme.textColor = "text-white";
                             } else {
                               state.changetheme.themes = "light";
                               state.changetheme.bgColor = "bg-white";
                               state.changetheme.textColor = "text-balck";
-                              state.changetheme.status = false;
                             }
                           },
                         },
@@ -78,12 +77,12 @@ export default function Baner() {
       </div>
       <div
         class={`${
-          themes == `light` ? `hidden` : `block`
+          themes === `light` ? `hidden` : `block`
         } absolute left-10 top-40 rotate-45 blur-3xl rounded-3xl bg-sky-800 opacity-40 h-24 w-[250px] lg:h-32 lg:w-[450px] xl:h-44 xl:w-[600px]`}
       ></div>
       <div
         class={`${
-          themes == `light` ? `hidden` : `block`
+          themes === `light` ? `hidden` : `block`
         } absolute right-8 top-[60%] rotate-12 rounded-3xl bg-sky-800 opacity-60 blur-3xl h-24 w-[300px] lg:h-32 lg:w-[450px] xl:h-44 xl:w-[600px]`}
       ></div>
     </div>
